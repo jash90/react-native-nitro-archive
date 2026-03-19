@@ -9,6 +9,8 @@
     "src",
     "cpp",
     "android",
+    "!android/build",
+    "!android/.cxx",
     "nitrogen",
     "react-native-tar-bz2.podspec",
     "react-native.config.js",
