@@ -29,7 +29,7 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "react-native-tar-bz2"
+      "react-native-nitro-archive"
     ]
   }
 }
