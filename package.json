@@ -1,0 +1,56 @@
+{
+  "name": "react-native-tar-bz2",
+  "version": "0.1.0",
+  "description": "React Native Nitro Module for tar.bz2 archive operations (pack, unpack, list contents)",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "source": "src/index.ts",
+  "files": [
+    "src",
+    "cpp",
+    "android",
+    "nitrogen",
+    "react-native-tar-bz2.podspec",
+    "react-native.config.js",
+    "app.plugin.js",
+    "nitro.json",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__"
+  ],
+  "scripts": {
+    "nitrogen": "nitrogen",
+    "typescript": "tsc --noEmit"
+  },
+  "keywords": [
+    "react-native",
+    "nitro",
+    "tar",
+    "bzip2",
+    "tar.bz2",
+    "archive",
+    "compress",
+    "decompress"
+  ],
+  "license": "MIT",
+  "author": "Bartlomiej Zimny",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicholasgasior/react-native-tar-bz2"
+  },
+  "homepage": "https://github.com/nicholasgasior/react-native-tar-bz2#readme",
+  "bugs": {
+    "url": "https://github.com/nicholasgasior/react-native-tar-bz2/issues"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-nitro-modules": ">= 0.20.0"
+  },
+  "devDependencies": {
+    "@expo/config-plugins": "^55.0.7",
+    "nitrogen": "^0.35.2",
+    "react-native-nitro-modules": "^0.35.2",
+    "typescript": "^5.5.0"
+  }
+}

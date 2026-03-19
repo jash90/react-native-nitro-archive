@@ -1,0 +1,63 @@
+buildscript {
+  ext.safeExtGet = { prop, fallback ->
+    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+  }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.kotlin.android'
+
+// Nitrogen autolinking
+def autolinkingScript = file("../nitrogen/generated/android/TarBz2+autolinking.gradle")
+if (autolinkingScript.exists()) {
+  apply from: autolinkingScript
+}
+
+android {
+  namespace "com.margelo.nitro.tarbz2"
+  compileSdkVersion safeExtGet('compileSdkVersion', 35)
+
+  defaultConfig {
+    minSdkVersion safeExtGet('minSdkVersion', 24)
+    targetSdkVersion safeExtGet('targetSdkVersion', 35)
+
+    externalNativeBuild {
+      cmake {
+        cppFlags "-O2 -fexceptions -frtti -std=c++20"
+        arguments "-DANDROID_STL=c++_shared"
+      }
+    }
+  }
+
+  externalNativeBuild {
+    cmake {
+      path "CMakeLists.txt"
+    }
+  }
+
+  buildFeatures {
+    prefab true
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+  }
+
+  kotlinOptions {
+    jvmTarget = '17'
+  }
+
+  sourceSets {
+    main {
+      java.srcDirs += [
+        '../nitrogen/generated/android/kotlin'
+      ]
+    }
+  }
+}
+
+dependencies {
+  implementation 'org.apache.commons:commons-compress:1.26.0'
+  implementation project(':react-native-nitro-modules')
+}

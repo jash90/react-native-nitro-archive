@@ -1,0 +1,23 @@
+{
+  "$schema": "https://nitro.margelo.com/nitro.schema.json",
+  "cxxNamespace": ["tarbz2"],
+  "ios": {
+    "iosModuleName": "TarBz2"
+  },
+  "android": {
+    "androidNamespace": ["tarbz2"],
+    "androidCxxLibName": "TarBz2"
+  },
+  "autolinking": {
+    "TarBz2": {
+      "ios": {
+        "language": "c++",
+        "implementationClassName": "HybridTarBz2"
+      },
+      "android": {
+        "language": "kotlin",
+        "implementationClassName": "HybridTarBz2"
+      }
+    }
+  }
+}

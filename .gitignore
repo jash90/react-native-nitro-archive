@@ -1,0 +1,7 @@
+node_modules/
+lib/
+example/node_modules/
+example/ios/Pods/
+example/.expo/
+*.tgz
+.DS_Store

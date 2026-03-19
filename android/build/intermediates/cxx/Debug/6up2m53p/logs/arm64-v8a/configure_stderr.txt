@@ -1,0 +1,19 @@
+CMake Error at /Users/bartlomiejzimny/Projects/react-native-tar-bz2/nitrogen/generated/android/TarBz2+autolinking.cmake:58 (find_package):
+  By not providing "Findfbjni.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "fbjni", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "fbjni" with any of
+  the following names:
+
+    fbjniConfig.cmake
+    fbjni-config.cmake
+
+  Add the installation prefix of "fbjni" to CMAKE_PREFIX_PATH or set
+  "fbjni_DIR" to a directory containing one of the above files.  If "fbjni"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+Call Stack (most recent call first):
+  CMakeLists.txt:16 (include)
+
+

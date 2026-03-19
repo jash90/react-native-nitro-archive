@@ -1,0 +1,5 @@
+/Users/bartlomiejzimny/Projects/react-native-tar-bz2/nitrogen/generated/android/kotlin/com/margelo/nitro/tarbz2/TarBz2OnLoad.kt
+/Users/bartlomiejzimny/Projects/react-native-tar-bz2/nitrogen/generated/android/kotlin/com/margelo/nitro/tarbz2/TarBz2Result.kt
+/Users/bartlomiejzimny/Projects/react-native-tar-bz2/nitrogen/generated/android/kotlin/com/margelo/nitro/tarbz2/HybridTarBz2Spec.kt
+/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/src/main/java/com/margelo/nitro/tarbz2/HybridTarBz2.kt
+/Users/bartlomiejzimny/Projects/react-native-tar-bz2/nitrogen/generated/android/kotlin/com/margelo/nitro/tarbz2/Func_void_double.kt

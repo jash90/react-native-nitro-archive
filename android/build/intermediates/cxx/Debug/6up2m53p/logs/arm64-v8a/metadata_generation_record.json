@@ -1,0 +1,145 @@
+[
+  {
+    "level_": 0,
+    "message_": "Start JSON generation. Platform version: 24 min SDK version: arm64-v8a",
+    "file_": "/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "rebuilding JSON /Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/.cxx/Debug/6up2m53p/arm64-v8a/android_gradle_build.json due to:",
+    "file_": "/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "- no fingerprint file, will remove stale configuration folder",
+    "file_": "/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home/bin/java \\\n  --class-path \\\n  /Users/bartlomiejzimny/.gradle/caches/modules-2/files-2.1/com.google.prefab/cli/2.1.0/aa32fec809c44fa531f01dcfb739b5b3304d3050/cli-2.1.0-all.jar \\\n  com.google.prefab.cli.AppKt \\\n  --build-system \\\n  cmake \\\n  --platform \\\n  android \\\n  --abi \\\n  arm64-v8a \\\n  --os-version \\\n  24 \\\n  --stl \\\n  c++_shared \\\n  --ndk-version \\\n  27 \\\n  --output \\\n  /var/folders/ld/1nsf3_657rjgy72rbztyqfzr0000gn/T/agp-prefab-staging1513026419957477683/staged-cli-output \\\n  /Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/build/intermediates/cxx/refs/react-native-nitro-modules/p4g1c656\n",
+    "file_": "/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "Received process result: 0",
+    "file_": "/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "removing stale contents from \u0027/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/.cxx/Debug/6up2m53p/arm64-v8a\u0027",
+    "file_": "/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "created folder \u0027/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/.cxx/Debug/6up2m53p/arm64-v8a\u0027",
+    "file_": "/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "executing cmake /Users/bartlomiejzimny/Library/Android/sdk/cmake/3.22.1/bin/cmake \\\n  -H/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android \\\n  -DCMAKE_SYSTEM_NAME\u003dAndroid \\\n  -DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON \\\n  -DCMAKE_SYSTEM_VERSION\u003d24 \\\n  -DANDROID_PLATFORM\u003dandroid-24 \\\n  -DANDROID_ABI\u003darm64-v8a \\\n  -DCMAKE_ANDROID_ARCH_ABI\u003darm64-v8a \\\n  -DANDROID_NDK\u003d/Users/bartlomiejzimny/Library/Android/sdk/ndk/27.0.12077973 \\\n  -DCMAKE_ANDROID_NDK\u003d/Users/bartlomiejzimny/Library/Android/sdk/ndk/27.0.12077973 \\\n  -DCMAKE_TOOLCHAIN_FILE\u003d/Users/bartlomiejzimny/Library/Android/sdk/ndk/27.0.12077973/build/cmake/android.toolchain.cmake \\\n  -DCMAKE_MAKE_PROGRAM\u003d/Users/bartlomiejzimny/Library/Android/sdk/cmake/3.22.1/bin/ninja \\\n  \"-DCMAKE_CXX_FLAGS\u003d-O2 -fexceptions -frtti -std\u003dc++20\" \\\n  -DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/build/intermediates/cxx/Debug/6up2m53p/obj/arm64-v8a \\\n  -DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003d/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/build/intermediates/cxx/Debug/6up2m53p/obj/arm64-v8a \\\n  -DCMAKE_BUILD_TYPE\u003dDebug \\\n  -DCMAKE_FIND_ROOT_PATH\u003d/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/.cxx/Debug/6up2m53p/prefab/arm64-v8a/prefab \\\n  -B/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/.cxx/Debug/6up2m53p/arm64-v8a \\\n  -GNinja \\\n  -DANDROID_STL\u003dc++_shared\n",
+    "file_": "/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "/Users/bartlomiejzimny/Library/Android/sdk/cmake/3.22.1/bin/cmake \\\n  -H/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android \\\n  -DCMAKE_SYSTEM_NAME\u003dAndroid \\\n  -DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON \\\n  -DCMAKE_SYSTEM_VERSION\u003d24 \\\n  -DANDROID_PLATFORM\u003dandroid-24 \\\n  -DANDROID_ABI\u003darm64-v8a \\\n  -DCMAKE_ANDROID_ARCH_ABI\u003darm64-v8a \\\n  -DANDROID_NDK\u003d/Users/bartlomiejzimny/Library/Android/sdk/ndk/27.0.12077973 \\\n  -DCMAKE_ANDROID_NDK\u003d/Users/bartlomiejzimny/Library/Android/sdk/ndk/27.0.12077973 \\\n  -DCMAKE_TOOLCHAIN_FILE\u003d/Users/bartlomiejzimny/Library/Android/sdk/ndk/27.0.12077973/build/cmake/android.toolchain.cmake \\\n  -DCMAKE_MAKE_PROGRAM\u003d/Users/bartlomiejzimny/Library/Android/sdk/cmake/3.22.1/bin/ninja \\\n  \"-DCMAKE_CXX_FLAGS\u003d-O2 -fexceptions -frtti -std\u003dc++20\" \\\n  -DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/build/intermediates/cxx/Debug/6up2m53p/obj/arm64-v8a \\\n  -DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003d/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/build/intermediates/cxx/Debug/6up2m53p/obj/arm64-v8a \\\n  -DCMAKE_BUILD_TYPE\u003dDebug \\\n  -DCMAKE_FIND_ROOT_PATH\u003d/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/.cxx/Debug/6up2m53p/prefab/arm64-v8a/prefab \\\n  -B/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/.cxx/Debug/6up2m53p/arm64-v8a \\\n  -GNinja \\\n  -DANDROID_STL\u003dc++_shared\n",
+    "file_": "/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "Received process result: 1",
+    "file_": "/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "JSON generation completed with problem. Exception: com.android.ide.common.process.ProcessException: -- The C compiler identification is Clang 18.0.1\n-- The CXX compiler identification is Clang 18.0.1\n-- Detecting C compiler ABI info\n-- Detecting C compiler ABI info - done\n-- Check for working C compiler: /Users/bartlomiejzimny/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang - skipped\n-- Detecting C compile features\n-- Detecting C compile features - done\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: /Users/bartlomiejzimny/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- Configuring incomplete, errors occurred!\nSee also \"/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/.cxx/Debug/6up2m53p/arm64-v8a/CMakeFiles/CMakeOutput.log\".\n\nC++ build system [configure] failed while executing:\n    /Users/bartlomiejzimny/Library/Android/sdk/cmake/3.22.1/bin/cmake \\\n      -H/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android \\\n      -DCMAKE_SYSTEM_NAME\u003dAndroid \\\n      -DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON \\\n      -DCMAKE_SYSTEM_VERSION\u003d24 \\\n      -DANDROID_PLATFORM\u003dandroid-24 \\\n      -DANDROID_ABI\u003darm64-v8a \\\n      -DCMAKE_ANDROID_ARCH_ABI\u003darm64-v8a \\\n      -DANDROID_NDK\u003d/Users/bartlomiejzimny/Library/Android/sdk/ndk/27.0.12077973 \\\n      -DCMAKE_ANDROID_NDK\u003d/Users/bartlomiejzimny/Library/Android/sdk/ndk/27.0.12077973 \\\n      -DCMAKE_TOOLCHAIN_FILE\u003d/Users/bartlomiejzimny/Library/Android/sdk/ndk/27.0.12077973/build/cmake/android.toolchain.cmake \\\n      -DCMAKE_MAKE_PROGRAM\u003d/Users/bartlomiejzimny/Library/Android/sdk/cmake/3.22.1/bin/ninja \\\n      \"-DCMAKE_CXX_FLAGS\u003d-O2 -fexceptions -frtti -std\u003dc++20\" \\\n      -DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/build/intermediates/cxx/Debug/6up2m53p/obj/arm64-v8a \\\n      -DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003d/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/build/intermediates/cxx/Debug/6up2m53p/obj/arm64-v8a \\\n      -DCMAKE_BUILD_TYPE\u003dDebug \\\n      -DCMAKE_FIND_ROOT_PATH\u003d/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/.cxx/Debug/6up2m53p/prefab/arm64-v8a/prefab \\\n      -B/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/.cxx/Debug/6up2m53p/arm64-v8a \\\n      -GNinja \\\n      -DANDROID_STL\u003dc++_shared\n  from /Users/bartlomiejzimny/Projects/react-native-tar-bz2/android\nCMake Error at /Users/bartlomiejzimny/Projects/react-native-tar-bz2/nitrogen/generated/android/TarBz2+autolinking.cmake:58 (find_package):\n  By not providing \"Findfbjni.cmake\" in CMAKE_MODULE_PATH this project has\n  asked CMake to find a package configuration file provided by \"fbjni\", but\n  CMake did not find one.\n\n  Could not find a package configuration file provided by \"fbjni\" with any of\n  the following names:\n\n    fbjniConfig.cmake\n    fbjni-config.cmake\n\n  Add the installation prefix of \"fbjni\" to CMAKE_PREFIX_PATH or set\n  \"fbjni_DIR\" to a directory containing one of the above files.  If \"fbjni\"\n  provides a separate development package or SDK, be sure it has been\n  installed.\nCall Stack (most recent call first):\n  CMakeLists.txt:16 (include)",
+    "file_": "/Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  }
+]

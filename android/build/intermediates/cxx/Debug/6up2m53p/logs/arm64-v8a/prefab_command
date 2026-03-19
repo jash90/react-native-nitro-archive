@@ -1,0 +1,19 @@
+/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home/bin/java \
+  --class-path \
+  /Users/bartlomiejzimny/.gradle/caches/modules-2/files-2.1/com.google.prefab/cli/2.1.0/aa32fec809c44fa531f01dcfb739b5b3304d3050/cli-2.1.0-all.jar \
+  com.google.prefab.cli.AppKt \
+  --build-system \
+  cmake \
+  --platform \
+  android \
+  --abi \
+  arm64-v8a \
+  --os-version \
+  24 \
+  --stl \
+  c++_shared \
+  --ndk-version \
+  27 \
+  --output \
+  /var/folders/ld/1nsf3_657rjgy72rbztyqfzr0000gn/T/agp-prefab-staging1513026419957477683/staged-cli-output \
+  /Users/bartlomiejzimny/Projects/react-native-tar-bz2/android/build/intermediates/cxx/refs/react-native-nitro-modules/p4g1c656
