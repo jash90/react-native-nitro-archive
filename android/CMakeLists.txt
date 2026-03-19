@@ -3,12 +3,13 @@ project(NitroArchive)
 
 set(CMAKE_CXX_STANDARD 20)
 
-# Build shared C++ code (bzip2 + minizip-ng + lzma + compression + tar + zip + sevenz + HybridArchive)
+# Build shared C++ code (bzip2 + minizip-ng + lzma + compression + tar + zip + sevenz)
 add_subdirectory(../cpp archive_cpp_build)
 
-# Create the shared library
+# Create the shared library (HybridArchive compiled here with Nitro includes)
 add_library(NitroArchive SHARED
   src/main/cpp/cpp-adapter.cpp
+  ../cpp/HybridArchive.cpp
 )
 
 target_include_directories(NitroArchive PRIVATE

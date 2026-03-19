@@ -159,6 +159,13 @@
 #include <stdlib.h> /* size_t, NULL, malloc */
 #include <time.h>   /* time_t, time() */
 #include <string.h> /* memset, strncpy, strlen */
+
+#ifndef MZ_ALLOC
+#  define MZ_ALLOC(size) malloc(size)
+#endif
+#ifndef MZ_FREE
+#  define MZ_FREE(ptr) free(ptr)
+#endif
 #include <limits.h>
 
 #if defined(HAVE_STDINT_H)

@@ -768,6 +768,12 @@ int32_t mz_zip_reader_entry_save_file(void *handle, const char *path) {
     }
 
     err = mz_stream_os_open(stream, pathwfs, MZ_OPEN_MODE_CREATE);
+#ifdef __ANDROID__
+    {
+        extern int __android_log_print(int prio, const char *tag, const char *fmt, ...);
+        __android_log_print(6, "mz_zip_rw", "os_open('%s', CREATE)=%d", pathwfs, err);
+    }
+#endif
 
     if (err == MZ_OK)
         err = mz_zip_reader_entry_save(reader, stream, mz_stream_write);

@@ -63,13 +63,19 @@ void ZipHandler::unpack(const std::string& src, const std::string& dst,
 
   fs::create_directories(dst);
 
+  // Resolve symlinks in destination path (e.g. /data/user/0 -> /data/data on Android)
+  // to prevent false positives in minizip-ng's symlink safety check
+  std::string resolvedDst = dst;
+  auto canonical = fs::canonical(dst);
+  resolvedDst = canonical.string();
+
   int32_t err = mz_zip_reader_open_file(reader, src.c_str());
   if (err != MZ_OK) {
     mz_zip_reader_delete(&reader);
     throw std::runtime_error("Cannot open zip file: " + src + " (error " + std::to_string(err) + ")");
   }
 
-  err = mz_zip_reader_save_all(reader, dst.c_str());
+  err = mz_zip_reader_save_all(reader, resolvedDst.c_str());
   if (err != MZ_OK && err != MZ_END_OF_LIST) {
     mz_zip_reader_close(reader);
     mz_zip_reader_delete(&reader);

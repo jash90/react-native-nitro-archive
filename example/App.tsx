@@ -79,6 +79,7 @@ export default function App() {
 
   const log = (text: string, ok = true) => {
     setLogs((prev) => [...prev, { text, ok }]);
+    console.log(text);
     setTimeout(() => scrollRef.current?.scrollToEnd({ animated: false }), 50);
   };
 
