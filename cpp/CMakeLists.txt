@@ -21,10 +21,13 @@ if(APPLE)
   set_source_files_properties(${MINIZIP_SOURCES} PROPERTIES
     COMPILE_FLAGS "-w -DHAVE_ZLIB -DZLIB_COMPAT -DHAVE_WZAES -DHAVE_PKCRYPT -DMZ_ZIP_NO_SIGNING")
 else()
-  # Android — disable crypto (mz_crypt_brg.c is incompatible with minizip-ng API)
-  # mz_crypt.c provides stub functions when MZ_ZIP_NO_CRYPTO is defined
+  # Android — use Brian Gladman's crypto library for AES/SHA/HMAC
+  list(APPEND MINIZIP_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/vendor/minizip-ng/mz_crypt_brg.c")
+  file(GLOB BRG_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/vendor/minizip-ng/lib/brg/*.c")
+  list(APPEND MINIZIP_SOURCES ${BRG_SOURCES})
+  set(MINIZIP_EXTRA_INCLUDES "${CMAKE_CURRENT_SOURCE_DIR}/vendor/minizip-ng/lib/brg")
   set_source_files_properties(${MINIZIP_SOURCES} PROPERTIES
-    COMPILE_FLAGS "-w -DHAVE_ZLIB -DZLIB_COMPAT -DMZ_ZIP_NO_CRYPTO -DMZ_ZIP_NO_SIGNING")
+    COMPILE_FLAGS "-w -DHAVE_ZLIB -DZLIB_COMPAT -DHAVE_WZAES -DHAVE_PKCRYPT -DMZ_ZIP_NO_SIGNING")
 endif()
 
 # Vendored LZMA SDK sources (7z support)

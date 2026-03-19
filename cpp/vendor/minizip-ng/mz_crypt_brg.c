@@ -184,8 +184,10 @@ void mz_crypt_aes_reset(void *handle) {
     MZ_UNUSED(handle);
 }
 
-int32_t mz_crypt_aes_encrypt(void *handle, uint8_t *buf, int32_t size) {
+int32_t mz_crypt_aes_encrypt(void *handle, const void *aad, int32_t aad_size, uint8_t *buf, int32_t size) {
     mz_crypt_aes *aes = (mz_crypt_aes *)handle;
+    MZ_UNUSED(aad);
+    MZ_UNUSED(aad_size);
 
     if (aes == NULL || buf == NULL)
         return MZ_PARAM_ERROR;
@@ -198,8 +200,19 @@ int32_t mz_crypt_aes_encrypt(void *handle, uint8_t *buf, int32_t size) {
     return size;
 }
 
-int32_t mz_crypt_aes_decrypt(void *handle, uint8_t *buf, int32_t size) {
+int32_t mz_crypt_aes_encrypt_final(void *handle, uint8_t *buf, int32_t size, uint8_t *tag, int32_t tag_size) {
+    MZ_UNUSED(handle);
+    MZ_UNUSED(buf);
+    MZ_UNUSED(size);
+    MZ_UNUSED(tag);
+    MZ_UNUSED(tag_size);
+    return MZ_SUPPORT_ERROR; /* GCM not supported by BRG backend */
+}
+
+int32_t mz_crypt_aes_decrypt(void *handle, const void *aad, int32_t aad_size, uint8_t *buf, int32_t size) {
     mz_crypt_aes *aes = (mz_crypt_aes *)handle;
+    MZ_UNUSED(aad);
+    MZ_UNUSED(aad_size);
     if (aes == NULL || buf == NULL)
         return MZ_PARAM_ERROR;
     if (size != MZ_AES_BLOCK_SIZE)
@@ -211,9 +224,20 @@ int32_t mz_crypt_aes_decrypt(void *handle, uint8_t *buf, int32_t size) {
     return size;
 }
 
-int32_t mz_crypt_aes_set_encrypt_key(void *handle, const void *key, int32_t key_length) {
-    mz_crypt_aes *aes = (mz_crypt_aes *)handle;
+int32_t mz_crypt_aes_decrypt_final(void *handle, uint8_t *buf, int32_t size, const uint8_t *tag, int32_t tag_size) {
+    MZ_UNUSED(handle);
+    MZ_UNUSED(buf);
+    MZ_UNUSED(size);
+    MZ_UNUSED(tag);
+    MZ_UNUSED(tag_size);
+    return MZ_SUPPORT_ERROR; /* GCM not supported by BRG backend */
+}
 
+int32_t mz_crypt_aes_set_encrypt_key(void *handle, const void *key, int32_t key_length,
+    const void *iv, int32_t iv_length) {
+    mz_crypt_aes *aes = (mz_crypt_aes *)handle;
+    MZ_UNUSED(iv);
+    MZ_UNUSED(iv_length);
 
     if (aes == NULL || key == NULL)
         return MZ_PARAM_ERROR;
@@ -227,9 +251,11 @@ int32_t mz_crypt_aes_set_encrypt_key(void *handle, const void *key, int32_t key_
     return MZ_OK;
 }
 
-int32_t mz_crypt_aes_set_decrypt_key(void *handle, const void *key, int32_t key_length) {
+int32_t mz_crypt_aes_set_decrypt_key(void *handle, const void *key, int32_t key_length,
+    const void *iv, int32_t iv_length) {
     mz_crypt_aes *aes = (mz_crypt_aes *)handle;
-
+    MZ_UNUSED(iv);
+    MZ_UNUSED(iv_length);
 
     if (aes == NULL || key == NULL)
         return MZ_PARAM_ERROR;
