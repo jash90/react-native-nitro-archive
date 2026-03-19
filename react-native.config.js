@@ -4,7 +4,7 @@ module.exports = {
       ios: {},
       android: {
         sourceDir: 'android',
-        packageImportPath: 'import com.margelo.nitro.tarbz2.TarBz2OnLoad',
+        packageImportPath: 'import com.margelo.nitro.archive.NitroArchiveOnLoad',
         cmakeListsPath: '../android/CMakeLists.txt',
       },
     },

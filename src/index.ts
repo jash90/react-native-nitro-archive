@@ -1,28 +1,30 @@
 import { NitroModules } from 'react-native-nitro-modules'
-import type { TarBz2 } from './specs/TarBz2.nitro'
+import type { Archive, ArchiveFormat, ArchiveOptions, ArchiveEntry, ArchiveResult, ProgressCallback } from './specs/Archive.nitro'
 
-const TarBz2Module = NitroModules.createHybridObject<TarBz2>('TarBz2')
+const ArchiveModule = NitroModules.createHybridObject<Archive>('Archive')
 
-export const unpack = (src: string, dest: string, overwrite = true) =>
-  TarBz2Module.unpack(src, dest, overwrite)
-
-export const pack = (src: string, dest: string) =>
-  TarBz2Module.pack(src, dest)
-
-export const listContents = (src: string) =>
-  TarBz2Module.listContents(src)
-
-export const unpackWithProgress = (
+export const unpack = (
   src: string,
   dest: string,
-  overwrite: boolean,
-  onProgress: (progress: number) => void
-) => TarBz2Module.unpackWithProgress(src, dest, overwrite, onProgress)
+  overwrite = true,
+  options?: ArchiveOptions,
+  onProgress?: ProgressCallback
+) => ArchiveModule.unpack(src, dest, overwrite, options, onProgress)
 
-export const packWithProgress = (
+export const pack = (
   src: string,
   dest: string,
-  onProgress: (progress: number) => void
-) => TarBz2Module.packWithProgress(src, dest, onProgress)
+  format: ArchiveFormat = 'tar.bz2',
+  options?: ArchiveOptions,
+  onProgress?: ProgressCallback
+) => ArchiveModule.pack(src, dest, format, options, onProgress)
 
-export type { TarBz2, TarBz2Result } from './specs/TarBz2.nitro'
+export const listContents = (src: string, options?: ArchiveOptions) =>
+  ArchiveModule.listContents(src, options)
+
+export const detectFormat = (src: string) => ArchiveModule.detectFormat(src)
+
+export const testArchive = (src: string, password?: string) =>
+  ArchiveModule.testArchive(src, password)
+
+export type { Archive, ArchiveFormat, ArchiveOptions, ArchiveEntry, ArchiveResult, ProgressCallback }

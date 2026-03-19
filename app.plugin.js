@@ -1,5 +1,5 @@
-// Expo Config Plugin for react-native-tar-bz2
-// Injects Android native build configuration (Kotlin sources, CMake, Commons Compress)
+// Expo Config Plugin for react-native-nitro-archive
+// Injects Android native build configuration (CMake, C++ sources)
 
 let configPlugins;
 try {
@@ -10,49 +10,45 @@ try {
 
 const { withAppBuildGradle } = configPlugins;
 
-function withTarBz2(config) {
+function withNitroArchive(config) {
   return withAppBuildGradle(config, (config) => {
-    if (config.modResults.contents.includes('react-native-tar-bz2')) {
+    if (config.modResults.contents.includes('react-native-nitro-archive')) {
       return config;
     }
 
     config.modResults.contents += `
 
-// ===== react-native-tar-bz2 Nitro Module =====
-def tarBz2Module = new File(["node", "--print", "require.resolve('react-native-tar-bz2/package.json')"].execute(null, rootDir).text.trim()).parentFile
-apply from: new File(tarBz2Module, 'nitrogen/generated/android/TarBz2+autolinking.gradle')
+// ===== react-native-nitro-archive Nitro Module =====
+def nitroArchiveModule = new File(["node", "--print", "require.resolve('react-native-nitro-archive/package.json')"].execute(null, rootDir).text.trim()).parentFile
+apply from: new File(nitroArchiveModule, 'nitrogen/generated/android/NitroArchive+autolinking.gradle')
 
 android.sourceSets.main.java.srcDirs += [
-    new File(tarBz2Module, 'android/src/main/java').absolutePath,
-    new File(tarBz2Module, 'nitrogen/generated/android/kotlin').absolutePath,
+    new File(nitroArchiveModule, 'android/src/main/java').absolutePath,
+    new File(nitroArchiveModule, 'nitrogen/generated/android/kotlin').absolutePath,
 ]
-
-dependencies {
-    implementation 'org.apache.commons:commons-compress:1.26.0'
-}
 
 afterEvaluate {
     tasks.matching { it.name.startsWith('configureCMake') }.configureEach { cmakeTask ->
         cmakeTask.doFirst {
             def autolinkCmake = file("\${buildDir}/generated/autolinking/src/main/jni/Android-autolinking.cmake")
-            if (autolinkCmake.exists() && !autolinkCmake.text.contains('TarBz2')) {
-                def cmakeDir = new File(tarBz2Module, 'android').absolutePath
+            if (autolinkCmake.exists() && !autolinkCmake.text.contains('NitroArchive')) {
+                def cmakeDir = new File(nitroArchiveModule, 'android').absolutePath
                 def content = autolinkCmake.text
-                content += "\\nadd_subdirectory(\\"" + cmakeDir + "\\" TarBz2_autolinked_build)\\n"
+                content += "\\nadd_subdirectory(\\"" + cmakeDir + "\\" NitroArchive_autolinked_build)\\n"
                 content = content.replace(
                     'set(AUTOLINKED_LIBRARIES',
-                    'set(AUTOLINKED_LIBRARIES\\n  TarBz2'
+                    'set(AUTOLINKED_LIBRARIES\\n  NitroArchive'
                 )
                 autolinkCmake.text = content
             }
         }
     }
 }
-// ===== end react-native-tar-bz2 =====
+// ===== end react-native-nitro-archive =====
 `;
 
     return config;
   });
 }
 
-module.exports = withTarBz2;
+module.exports = withNitroArchive;

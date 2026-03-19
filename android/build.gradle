@@ -5,16 +5,15 @@ buildscript {
 }
 
 apply plugin: 'com.android.library'
-apply plugin: 'org.jetbrains.kotlin.android'
 
 // Nitrogen autolinking
-def autolinkingScript = file("../nitrogen/generated/android/TarBz2+autolinking.gradle")
+def autolinkingScript = file("../nitrogen/generated/android/NitroArchive+autolinking.gradle")
 if (autolinkingScript.exists()) {
   apply from: autolinkingScript
 }
 
 android {
-  namespace "com.margelo.nitro.tarbz2"
+  namespace "com.margelo.nitro.archive"
   compileSdkVersion safeExtGet('compileSdkVersion', 35)
 
   defaultConfig {
@@ -44,10 +43,6 @@ android {
     targetCompatibility JavaVersion.VERSION_17
   }
 
-  kotlinOptions {
-    jvmTarget = '17'
-  }
-
   sourceSets {
     main {
       java.srcDirs += [
@@ -58,6 +53,5 @@ android {
 }
 
 dependencies {
-  implementation 'org.apache.commons:commons-compress:1.26.0'
   implementation project(':react-native-nitro-modules')
 }

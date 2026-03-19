@@ -1,7 +1,7 @@
 {
-  "name": "react-native-tar-bz2",
-  "version": "0.1.2",
-  "description": "React Native Nitro Module for tar.bz2 archive operations (pack, unpack, list contents)",
+  "name": "react-native-nitro-archive",
+  "version": "1.1.0",
+  "description": "React Native Nitro Module for archive operations: tar, tar.bz2, tar.gz, bz2, gz, zip (AES-256), 7z (pack, unpack, list, detect format) with streaming I/O",
   "main": "src/index.ts",
   "types": "src/index.ts",
   "source": "src/index.ts",
@@ -12,7 +12,7 @@
     "!android/build",
     "!android/.cxx",
     "nitrogen",
-    "react-native-tar-bz2.podspec",
+    "react-native-nitro-archive.podspec",
     "react-native.config.js",
     "app.plugin.js",
     "nitro.json",
@@ -29,8 +29,17 @@
     "nitro",
     "tar",
     "bzip2",
+    "gzip",
     "tar.bz2",
+    "tar.gz",
+    "gz",
+    "bz2",
     "archive",
+    "zip",
+    "7z",
+    "7zip",
+    "aes",
+    "encrypt",
     "compress",
     "decompress"
   ],
@@ -38,11 +47,11 @@
   "author": "Bartlomiej Zimny",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jash90/react-native-tar-bz2"
+    "url": "https://github.com/jash90/react-native-nitro-archive"
   },
-  "homepage": "https://github.com/jash90/react-native-tar-bz2#readme",
+  "homepage": "https://github.com/jash90/react-native-nitro-archive#readme",
   "bugs": {
-    "url": "https://github.com/jash90/react-native-tar-bz2/issues"
+    "url": "https://github.com/jash90/react-native-nitro-archive/issues"
   },
   "peerDependencies": {
     "react": "*",
