@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.module_name  = "TarBz2"
   s.version      = package["version"]
   s.summary      = package["description"]
-  s.homepage     = "https://github.com/nicholasgasior/react-native-tar-bz2"
+  s.homepage     = "https://github.com/jash90/react-native-tar-bz2"
   s.license      = package["license"]
   s.authors      = package["author"]
   s.platforms    = { :ios => "13.0" }

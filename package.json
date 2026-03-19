@@ -38,11 +38,11 @@
   "author": "Bartlomiej Zimny",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nicholasgasior/react-native-tar-bz2"
+    "url": "https://github.com/jash90/react-native-tar-bz2"
   },
-  "homepage": "https://github.com/nicholasgasior/react-native-tar-bz2#readme",
+  "homepage": "https://github.com/jash90/react-native-tar-bz2#readme",
   "bugs": {
-    "url": "https://github.com/nicholasgasior/react-native-tar-bz2/issues"
+    "url": "https://github.com/jash90/react-native-tar-bz2/issues"
   },
   "peerDependencies": {
     "react": "*",
